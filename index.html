@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppapeli 2</title>
+    <link rel="stylesheet" href="tyyli2.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Sika-noppapeli 🐷 🎲🎲</h1>
+    </div>
+
+    <div id="control">
+
+    </div>
+
+    <div class="row">
+        <div class="column2 side" id="rules">Säännöt
+            <p>Pelaajien tulee kerätä asetettu pistemäärä heittämällä noppaa ja laskemalla <br>
+            heittojen summa yhteen. Pelaaja heittää omalla vuorollaan noppia niin pitkään, että <br>
+        heittää toisella nopalla ykkösen tai päättää lopettaa heittämisen.<br>
+        Kun pelaaja heittää tuplat, hän saa tuplapisteet. Kun pelaaja heittää kaksi ykköstä, hän saa 25 pistettä.<br>
+        Kun vain toinen noppa on ykkönen, vuoro siirtyy seuraavalle pelaajalle, eikä kierrokselta tule pisteitä.<br>
+        Jos pelaaja heittää kolmet tuplat peräkkäin, vuoro siirtyy seuraavalle pelaajalle, eikä kierrokselta tule pisteitä.</p>
+        </div>
+
+        <div class ="column2 middle" id="dicepic">
+            <div><img src="dice_1.png" id="100"</div>
+            <div><img src="dice_1.png" id="101"</div>
+            <div>
+                <h4 id="gameAlert"></h4>
+            </div>
+            <div>
+                <h4 id="controlAlert"></h4>
+            </div>
+            <div class="scoreboard">
+                <p id="board"></p>
+            </div>
+        </div>
+
+        <div class="column2 side">
+            <form action="" id="addplayer">
+                <label for="add">Anna pelaajan nimi</label><br><br>
+                <input type="text" id="add"><br><br>
+                <button>Lisää</button>
+            </form>
+            <br>
+            <form action="" id="start">
+                <label for="score">Aseta pisteraja</label><br><br>
+                <input type="number" id="score"><br><br>
+                <button>Aloita peli</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="peli">
+        <div class="column side" style="background-color: pink;"></div>
+        <div class="column middle" style="background-color:pink;">
+            <div id="vuoro">
+                <h3 style="font-weight: normal;">Lisää pelaajat ja pisteraja</h3>
+            </div>
+            <div class="nappula">
+                <button onclick="roll()">
+                    <div class="nappi">Heitä noppaa</div>
+                </button>
+                <button onclick="endTurn()">
+                    <div class="nappi">
+                        Lopeta vuorosi
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+    
+    <script src="noppapeli2.js"></script>
+    
+</body>
+</html>

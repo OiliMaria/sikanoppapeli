@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    
+}
+
+.header {
+    background-color: pink;
+    padding: 10px;
+    text-align: center;
+}
+
+#dicepic {
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
+div p {
+    font-size: 14px;
+}
+
+.columnMiddle {
+    padding: 15px;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 350px;
+}
+
+div.nappula > button {
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    .column2 {
+        width: 100%;
+    }
+
+}
