@@ -9,6 +9,7 @@ let streak = 0;
 let turn = 1;
 let gameVictory = false;
 let tuplat = 0;
+let playing = false;
 
 function addPlayer(event) {
     event.preventDefault()
@@ -41,6 +42,7 @@ function startGame(event) {
 
             targetScore = document.getElementById("score").value;
             document.getElementById("vuoro").innerHTML = "Aloitetaan peli!" + "<br>" + players[turn - 1] + " aloittaa" +"<br>"
+            playing = true;
         }else {
             document.getElementById("controlAlert").innerHTML = "Pelaajia pitää olla vähintään 2";
         }
@@ -54,6 +56,7 @@ function endTurn(i) {
         if (scores[turn - 1] >= targetScore && gameVictory == false) {
             document.getElementById("gameAlert").innerHTML = players[turn - 1] + " voitti pelin!";
             gameVictory = true;
+            playing = false;
 
         }  
      }
@@ -71,6 +74,7 @@ function endTurn(i) {
     }
 
     function roll() {
+        if (!playing) return;
         let i = 100;
         while (i != 102) {
             let d = Math.floor(Math.random()* 6) + 1;
