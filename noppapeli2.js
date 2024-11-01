@@ -52,7 +52,7 @@ function endTurn(i) {
     if (i != 2) {
         scores[turn - 1] = scores[turn - 1] + streak;
         if (scores[turn - 1] >= targetScore && gameVictory == false) {
-            document.getElementById("gameAlert").innerHTML = players[turn -1] + " voitti pelin!";
+            document.getElementById("gameAlert").innerHTML = players[turn - 1] + " voitti pelin!";
             gameVictory = true;
 
         }  
