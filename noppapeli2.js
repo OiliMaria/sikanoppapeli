@@ -117,6 +117,7 @@ function endTurn(i) {
             streak += streak;
         }
     }
+        
     if (tuplat >= 3) {
         document.getElementById("gameAlert").innerHTML = players[turn - 1] + " heitti tuplat 3 kertaa, vuoro vaihtuu";
         endTurn(2);
